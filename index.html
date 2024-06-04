@@ -1,13 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Location Finder</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="main">
+
+    <div class="container">
+      <h1> Location Finder</h1>
+
+      <button id="findLocation" onclick="initMap()">Find My Location</button>
+
+      <div class="location-container" style="display: none;">
+        <div id="map"></div>
+        <div id="address"></div>
+        <button onclick="location.reload()">Locate Again</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
